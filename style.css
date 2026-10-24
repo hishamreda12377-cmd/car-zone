@@ -1,0 +1,1888 @@
+@view-transition{
+    navigation: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'internet', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    src: url(./fonts/lt_internet/LTInternet-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'jakarta', 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    src: url(./fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'dm sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    src: url(./fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'lato', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    src: url(./fonts/Lato/Lato-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    src: url(./fonts/Montserrat,Poppins/Poppins/Poppins-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(./fonts/Montserrat,Poppins/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+    font-display: swap;
+}
+
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    scroll-behavior: unset;
+    margin-bottom: 0%;
+    overflow-wrap: break-word;
+}
+
+main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+svg {
+    align-self: center;
+}
+
+button,
+a {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 2px solid #00A86B;
+    outline-offset: 2px;
+}
+
+hr {
+    background-color: green;
+    max-width: 100%;
+}
+
+.header {
+    z-index: 1000;
+    background-color: #306844;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 20px;
+}
+
+.home-btn {
+    padding-left: 30px;
+}
+
+.logo {
+    font-family: 'Montserrat', montserrat, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 36px;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+.logo-car {
+    color: #FFFFFF;
+}
+
+.logo-zone {
+    color: #00A86B;
+}
+
+.navbar {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.nava {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 18px;
+}
+
+.nava:hover {
+    color: greenyellow;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 5 / 1;
+    min-height: 190px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: clamp(16px, 7%, 110px);
+    transform: translateY(-50%);
+    width: min(84%, 560px);
+    z-index: 1;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.image-content h1 {
+    font-size: clamp(28px, 4.2vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.image-content p {
+    font-size: clamp(14px, 1.7vw, 18px);
+    line-height: 1.6;
+    margin-bottom: clamp(12px, 1.8vw, 22px);
+    color: #e8e8e8;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.custom-btn {
+    position: relative;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: #00b050;
+}
+
+.custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.custom-btn::after {
+    background-color: #fff;
+}
+
+.custom-btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.home-carsection {
+    background-color: whitesmoke;
+    width: 98%;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    justify-self: center;
+    align-content: center;
+    justify-items: center;
+    display: flex;
+    gap: 2rem;
+    padding: 1%;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: green;
+}
+
+.carb {
+    width: 750px;
+    max-width: 100%;
+    height: 390px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    border-radius: 15px;
+    display: flex;
+}
+
+.hero-title {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.cartypes {
+    font-size: 25px;
+    font-family: lato, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.explore {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background-color: #306844;
+    padding: 15px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    margin-top: 40px;
+    box-shadow: 2px 2px 2px #c4aaaa;
+    font-weight: 500;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.explore:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.explore:active {
+    transform: scale(0.9);
+    color: white;
+}
+
+.why {
+    margin-top: 20px;
+    width: 90%;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+
+}
+
+.why legend {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.why li {
+    font-size: 20px;
+}
+
+.why ul li p {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.why-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.why-box li {
+    width: 290px;
+    height: 80px;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.why-services ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.why-services ul li {
+    height: 60px;
+    width: 290px;
+    max-width: 100%;
+}
+
+.why-services ul li p {
+    text-align: center;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.why-services ul li svg {
+    color: green;
+}
+
+.page-title {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.cars {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 125px;
+}
+
+#cartypelabel {
+    font-size: 26px;
+    font-weight: 600;
+    color: green;
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.car {
+    background-color: white;
+    width: 300px;
+    max-width: calc(100% - 20px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 15px 0px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.car:hover img {
+    transform: scale(1.15) translateY(-12px);
+}
+
+.carname {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.line {
+    width: 190px;
+    color: black;
+}
+
+.price {
+    font-size: 16px;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.booknow {
+    border: none;
+    background-color: rgb(63, 145, 63);
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: white;
+    width: 170px;
+}
+
+.booknow:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.booknow:active {
+    color: beige;
+}
+
+.cardetails {
+    border: 2px solid #306844;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.services-title {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.services-subtitle {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.services {
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 1rem;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-color: red;
+}
+
+.service {
+    background-color: rgb(235, 230, 225);
+    width: 280px;
+    max-width: calc(100% - 24px);
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: green;
+    box-shadow: 2px 2px 2px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.service p b {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.service p {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 500;
+}
+
+.back-btn {
+    padding: 90px 0px 0px 40px;
+}
+
+.top-big-head {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    gap: 20px;
+    max-width: 96%;
+    justify-self: center;
+}
+
+.car-img-inspec {
+    width: 590px;
+    height: 500px;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.top-right-head {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.main-head-logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.mersicon {
+    width: 100px;
+}
+
+.car-tips {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.car-price {
+    font-size: 25px;
+}
+
+.spec-btn {
+    display: grid;
+    gap: 10px;
+}
+
+.btn-one {
+    border: none;
+    background-color: rgb(63, 145, 63);
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.btn-two {
+    border: none;
+    background-color: white;
+    color: green;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.mini-spec {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.mini-spec-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+    padding: 0px 10px;
+    width: 190px;
+    height: 75px;
+}
+
+.mini-spec-box h4 {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.mini-spec-box p {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.mini-spec-box-text p {
+    color: gray;
+}
+
+.bottom-big-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: rgb(233, 233, 233);
+}
+
+.bottom-left-head {
+    gap: 10px;
+}
+
+.about-title {
+    color: gray;
+}
+
+.about-text {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.bottom-right-head {
+    gap: 10px;
+    background-color: whitesmoke;
+    padding: 40px 20px;
+    border-radius: 15px;
+    width: 430px;
+}
+
+.cap {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.carphotos {
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 1rem;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carphotos img {
+    border-radius: 10px;
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.mersved {
+    width: 980px;
+    max-width: 100%;
+    height: 520px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    border-radius: 15px;
+    display: flex;
+}
+
+.big-section-incontact {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.section-title {
+    color: green;
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini-spec-incontact {
+    display: grid;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    border: 2px solid gray;
+    padding: 10px;
+    width: 300px;
+    height: 740px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.mini-spec-incontact div {
+    border: none;
+    width: 100%;
+}
+
+.mini-spec-box-incontact {
+    display: grid;
+}
+
+.contact-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contact-label {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.incontact-details {
+    margin-left: 30px;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.send-messege {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 740px;
+    background-color: whitesmoke;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid gray;
+}
+
+.message-title {
+    font-family: 'dm sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.message-sub {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 500;
+}
+
+.form-row {
+    display: flex;
+}
+
+.form-label {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 10px;
+}
+
+.input-label {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    font-size: 16px;
+}
+
+input {
+    width: 239px;
+    max-width: calc(100% - 7px);
+    margin-bottom: 10px;
+    justify-self: center;
+    border: none;
+    margin-left: 7px;
+    height: 44px;
+    border-radius: 15px;
+    border: 2px solid gray;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 500;
+}
+
+textarea {
+    border: none;
+    width: 100%;
+    max-height: 120px;
+    max-width: 100%;
+    min-height: 120px;
+    min-width: 0;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 2px solid gray;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-weight: 500;
+}
+
+.btn-one-incontact {
+    border: none;
+    background-color: rgb(63, 145, 63);
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.find-us {
+    width: 300px;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid gray;
+    height: 740px;
+}
+
+#incontact {
+    border: none;
+    width: 100%;
+}
+
+.btn-two-incontact {
+    border: none;
+    background-color: white;
+    color: green;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid green;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hours-row {
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1.5;
+}
+
+.label-bold {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.label-jakarta {
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+footer {
+    background-color: #306844;
+    color: whitesmoke;
+    font-family: jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    padding: 45px 20px 0;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: 20px;
+}
+
+.footer-top {
+    max-width: 1400px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand {
+    min-width: 0;
+}
+
+.footer-brand .logo {
+    font-size: 28px;
+}
+
+.footer-about {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #d5e5da;
+    margin-top: 14px;
+    max-width: 380px;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-title {
+    font-family: poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 19px;
+    margin-bottom: 16px;
+    color: #00A86B;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.footer-link {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-link:hover {
+    color: greenyellow;
+    transform: translateX(5px);
+}
+
+.footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.footer-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.footer-info svg {
+    color: #00A86B;
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 18px 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+    color: #cfe3d6;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .footer-about {
+        margin-inline: auto;
+    }
+
+    .footer-info li {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 960px) {
+    .home-carsection {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .details-carsection {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .home-carsection img {
+        width: 400px;
+        height: 250px;
+        margin-top: 10px;
+    }
+
+    .details-carsection img {
+        width: 380px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-carsection {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .home-carsection img {
+        width: 340px;
+        margin-top: 1px;
+    }
+
+    .carphotos {
+        width: 90%;
+    }
+
+    .header {
+        padding-right: 3px;
+        height: 70px;
+    }
+
+    .header img {
+        width: 85px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .navbar {
+        gap: 0.3rem;
+    }
+
+    .nava {
+        font-size: 15px;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 990px) {
+    .carphotos {
+        display: grid;
+        flex-direction: column;
+    }
+
+    .carphotos img {
+        width: 320px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .contact-card {
+        width: 90%;
+    }
+}
+
+.section {
+    font-family: 'Montserrat', montserrat, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: black;
+}
+
+.incontact {
+    display: grid;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn svg {
+    width: 35px;
+    height: 35px;
+    fill: #ffffff;
+}
+
+.contact-title {
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+.contact-block {
+    margin-left: 40px;
+}
+
+.contact-questions {
+    margin-left: 40px;
+    line-height: 1.4;
+}
+
+.contact-subtitle {
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    background-color: rgb(228, 224, 220);
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid;
+    justify-content: center;
+    justify-self: center;
+    align-items: stretch;
+}
+
+.contact-card {
+    background-color: #fff;
+    width: 250px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (min-width: 1280px) {
+
+    main {
+        width: 100%;
+        max-width: 1400px;
+        margin-inline: auto;
+    }
+
+    .header {
+        padding-inline: max(20px, calc((100% - 1400px) / 2));
+    }
+
+    .home-carsection {
+        width: 100%;
+        gap: 3rem;
+    }
+
+    .carb {
+        width: 860px;
+        height: 450px;
+    }
+
+    .why {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cars {
+        gap: 2.5rem;
+    }
+
+    .car {
+        width: 340px;
+    }
+
+    .car img {
+        height: 220px;
+    }
+
+    .carphotos img {
+        width: 240px;
+        height: 210px;
+    }
+
+    .mersved {
+        width: 1100px;
+        height: 580px;
+    }
+
+    .top-big-head {
+        max-width: 100%;
+    }
+
+    .car-img-inspec {
+        width: 640px;
+        height: 520px;
+    }
+
+    .big-section-incontact {
+        justify-content: center;
+        gap: 60px;
+        margin-top: 40px;
+    }
+
+    .service {
+        width: 320px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .top-big-head {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .car-img-inspec {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-right-head {
+        width: 100%;
+    }
+
+    .bottom-big-heading {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bottom-right-head {
+        width: 100%;
+    }
+
+    .mini-spec {
+        flex-wrap: wrap;
+    }
+
+    .mini-spec-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .mersved {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .big-section-incontact {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mini-spec-incontact,
+    .find-us {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .send-messege {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .carb {
+        width: 100%;
+        height: auto;
+    }
+
+    .mersved {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .header {
+        height: auto;
+        min-height: 70px;
+        padding: 8px 10px;
+    }
+
+    main {
+        padding-top: 90px;
+    }
+
+    .home-btn {
+        padding-left: 0;
+    }
+
+    .nava {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+
+    .why-box {
+        gap: 10px;
+    }
+
+    .why-box li {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .why {
+        width: 100%;
+    }
+
+    .why legend {
+        font-size: 20px;
+    }
+
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .carphotos img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+    }
+
+    .image-container {
+        aspect-ratio: 16 / 9;
+        min-height: 200px;
+    }
+
+    .image-content h1 {
+        font-size: clamp(24px, 5.6vw, 34px);
+        margin-bottom: 8px;
+    }
+
+    .image-content p {
+        font-size: clamp(13px, 3.4vw, 16px);
+        margin-bottom: 14px;
+    }
+
+    .top-big-head {
+        padding: 12px;
+    }
+
+    .bottom-big-heading {
+        padding: 10px 14px;
+    }
+
+    .back-btn {
+        padding: 24px 0px 0px 14px;
+    }
+
+    .btn-one,
+    .btn-two {
+        width: 100%;
+    }
+
+    .booknow {
+        width: 90%;
+    }
+
+    .bottom-right-head table,
+    .bottom-right-head tbody,
+    .bottom-right-head tr,
+    .bottom-right-head td {
+        display: block;
+        width: 100%;
+    }
+
+    .bottom-right-head tr {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nava {
+        font-size: 14px;
+        padding: 10px 4px;
+    }
+
+    .navbar {
+        gap: 0.2rem;
+        margin-right: 0;
+    }
+
+    main {
+        padding-top: 82px;
+    }
+
+    .cartypes {
+        font-size: 20px;
+    }
+
+    .why li {
+        font-size: 16px;
+    }
+
+    .car-price {
+        font-size: 21px;
+    }
+
+    .car-tips {
+        font-size: 16px;
+    }
+
+    .bottom-right-head {
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .nava {
+        font-size: 13px;
+        padding: 10px 2px;
+    }
+
+    .header {
+        padding: 8px 6px;
+    }
+
+    .why-box li {
+        max-width: 260px;
+    }
+
+    .image-container {
+        aspect-ratio: 3 / 2;
+        min-height: 190px;
+    }
+
+    .image-content h1 {
+        font-size: 24px;
+    }
+}
+
+
+.button {
+    --primary: #4f46e5;
+    --neutral-1: #ffffff;
+    --neutral-2: #f3f4f6;
+    --radius: 16px;
+
+    cursor: pointer;
+    border-radius: var(--radius);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    box-shadow:
+        0 1px 1px rgba(255, 255, 255, 0.4),
+        0 12px 24px rgba(0, 0, 0, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-width: 220px;
+    padding: 22px;
+    height: 72px;
+    font-family: "Inter", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+        0 2px 2px rgba(255, 255, 255, 0.4),
+        0 18px 32px rgba(0, 0, 0, 0.15),
+        0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+    transform: scale(1);
+    box-shadow:
+        0 0 1px 2px rgba(255, 255, 255, 0.3),
+        0 10px 3px -3px rgba(0, 0, 0, 0.2);
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    border: 2.5px solid transparent;
+    background:
+        linear-gradient(var(--neutral-1), var(--neutral-2)) padding-box,
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45)) border-box;
+    z-index: 0;
+    transition: all 0.4s ease;
+}
+
+.button:hover::after {
+    transform: scale(1.05, 1.1);
+    box-shadow: inset 0 -1px 3px 0 rgba(255, 255, 255, 1);
+}
+
+.button::before {
+    content: "";
+    inset: 7px 6px 6px 6px;
+    position: absolute;
+    background: linear-gradient(to top, var(--neutral-1), var(--neutral-2));
+    border-radius: 30px;
+    filter: blur(0.5px);
+    z-index: 2;
+}
+
+.state p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.state .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.state .icon svg {
+    overflow: visible;
+}
+
+.outline {
+    position: absolute;
+    border-radius: inherit;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    inset: -2px -3.5px;
+}
+
+.outline::before {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(from 180deg,
+            transparent 60%,
+            var(--primary) 85%,
+            transparent 100%);
+    animation: spin 2.5s linear infinite;
+    animation-play-state: paused;
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.button:hover .outline {
+    opacity: 1;
+}
+
+.button:hover .outline::before {
+    animation-play-state: running;
+}
+
+.state p span {
+    display: block;
+    opacity: 0;
+    animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+}
+
+.button:hover p span {
+    opacity: 1;
+    animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+}
+
+.button:focus p span {
+    opacity: 1;
+    animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
+}
+
+@keyframes wave {
+    30% {
+        opacity: 1;
+        transform: translateY(4px) translateX(0) rotate(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-4px) translateX(0) rotate(0);
+        color: var(--primary);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) translateX(5px) rotate(-90deg);
+        color: var(--primary);
+        filter: blur(5px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(4px) translateX(0) rotate(0);
+        filter: blur(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-3px) translateX(0) rotate(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
+
+@keyframes disapear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(5px) translateY(20px);
+        color: var(--primary);
+        filter: blur(5px);
+    }
+}
+
+.state--default .icon svg {
+    animation: land 0.6s ease forwards;
+}
+
+.button:hover .state--default .icon {
+    transform: rotate(45deg) scale(1.25);
+}
+
+.button:focus .state--default svg {
+    animation: takeOff 0.8s linear forwards;
+}
+
+.button:focus .state--default .icon {
+    transform: rotate(0) scale(1.25);
+}
+
+@keyframes takeOff {
+    0% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(80px) rotate(45deg) scale(2.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(180px) rotate(45deg) scale(0);
+    }
+}
+
+@keyframes land {
+    0% {
+        transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.state--default .icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 0;
+    left: -5px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.button:focus .state--default .icon:before {
+    animation: contrail 0.8s linear forwards;
+}
+
+@keyframes contrail {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    8% {
+        width: 15px;
+    }
+
+    60% {
+        opacity: 0.7;
+        width: 80px;
+    }
+
+    100% {
+        opacity: 0;
+        width: 160px;
+    }
+}
+
+.state {
+    padding-left: 29px;
+    z-index: 2;
+    display: flex;
+    position: relative;
+}
+
+.state--default span:nth-child(4) {
+    margin-right: 5px;
+}
+
+.state--sent {
+    display: none;
+}
+
+.state--sent svg {
+    transform: scale(1.25);
+    margin-right: 8px;
+}
+
+.button:focus .state--default {
+    position: absolute;
+}
+
+.button:focus .state--sent {
+    display: flex;
+}
+
+.button:focus .state--sent span {
+    opacity: 0;
+    animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
+}
+
+.button:focus .state--sent .icon svg {
+    opacity: 0;
+    animation: appear 1.2s ease forwards 0.8s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(4) rotate(-40deg);
+        color: var(--primary);
+        filter: blur(4px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(0.6);
+        filter: blur(1px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.custom-back-btn {
+    background-color: #ffffff;
+    text-align: center;
+    width: 192px;
+
+    height: 56px;
+
+    border-radius: 16px;
+
+    position: relative;
+    color: #000000;
+    font-size: 20px;
+
+    font-weight: 600;
+
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.custom-back-btn .btn-icon-wrapper {
+    background-color: #4ade80;
+
+    border-radius: 12px;
+
+    height: 48px;
+
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 4px;
+
+    top: 4px;
+    z-index: 10;
+    transition: width 0.5s ease-in-out;
+
+}
+
+.custom-back-btn .btn-text {
+    transform: translateX(8px);
+
+    margin: 0;
+    line-height: 56px;
+
+}
+
+.custom-back-btn:hover .btn-icon-wrapper {
+    width: 184px;
+
+}
